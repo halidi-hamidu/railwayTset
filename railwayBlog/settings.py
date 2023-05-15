@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 import dj_database_url
+import psycopg2
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "PGPASSWORD=rVsTX0IjiNkxOONSMQJ8 psql -h containers-us-west-162.railway.app -U postgres -p 5782 -d railway"
+DATABASE_URL = "postgresql://postgres:rVsTX0IjiNkxOONSMQJ8@containers-us-west-162.railway.app:5782/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
